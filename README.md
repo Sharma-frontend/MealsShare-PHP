@@ -1,3 +1,12 @@
+# 🍽️ MealsShare PHP Project
+
+A web-based platform that connects food donors and receivers to minimize food waste and hunger.
+
+## ⚙️ Setup Instructions
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Sharma-frontend/MealsShare-PHP.git
 # MealsShare PHP Project
 
 ## Database Setup
