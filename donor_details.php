@@ -1,9 +1,26 @@
 <?php
+
 session_start();
 include('db_connectt.php');
+
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']); // Sanitize input to prevent SQL injection
-    $sql = "SELECT * FROM active_donations WHERE d_id = $id"; // Replace 'users' with your table name
+    
+    // ✅ Check if it's an update request
+    if (isset($_POST['status'])) {
+        $status = $con->real_escape_string($_POST['status']);
+        $update_sql = "UPDATE active_donations SET status = '$status' WHERE d_id = $id";
+        
+        if ($con->query($update_sql) === TRUE) {
+            echo "Status updated successfully!";
+        } else {
+            echo "Error updating status: " . $con->error;
+        }
+        exit; // stop further execution after update
+    }
+
+    // ✅ Fetch the record if not updating
+    $sql = "SELECT * FROM active_donations WHERE d_id = $id";
     $result = $con->query($sql);
 
     if ($result->num_rows > 0) {
@@ -16,8 +33,9 @@ if (isset($_GET['id'])) {
     echo "Invalid request.";
     exit;
 }
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,6 +88,10 @@ if (isset($_GET['id'])) {
                 <th>ExpiryDate</th>
             <td><?php echo $row['exp']; ?></td>
             </tr>
+             <tr>
+                <th>Status</th>
+            <td><?php echo $row['status']; ?></td>
+            </tr>
             <tr>
                 <th>Mobile</th>
             <td><?php echo $row['mobile']; ?></td>
@@ -84,7 +106,11 @@ if (isset($_GET['id'])) {
                 <th>Address</th>
             <td><?php echo $row['city'] . " " . $row['state']. " " . $row['pincode']; ?></td>
             </tr>
+            
             <tr>
+                 <td>
+                    <button style='background-color: #CE7C02;border-style:none;' class='btn btn-primary' onclick="change_status(<?php echo $row['d_id']; ?>, 'Delivered')">Mark Delivered</button>
+                </td>
            <?php  echo "<td>
                                     <form action='donor_deletedonation.php' method='POST' >
                                         <input type='hidden' name='id' value='" . $row['d_id'] . "'>
@@ -108,7 +134,23 @@ if (isset($_GET['id'])) {
       </div>
     </div>
     <?php include 'footer.html'; ?>
- 
+
+
+    <script>
+function change_status(id, status) {
+  fetch("donor_details.php?id=" + id, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: "status=" + status
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert(data); // Show success/failure
+    location.reload(); // refresh page to see updated status
+  })
+  .catch(error => console.error("Error:", error));
+}
+</script>
 
 </body>
 </html>

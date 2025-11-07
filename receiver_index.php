@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Hunger</title>
+    <title>Meal Share</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css?v=<?php echo time();?>" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?v=<?php echo time();?>"
@@ -56,7 +56,7 @@
 </div>
 
 <div class="main-content">
-    <h1>WELCOME TO Zero Hunger</h1>
+    <h1>WELCOME TO Meal Share</h1>
     <p>We Believe that we can Eradicate <br><span style="color: red">Poverty</span> with you</p>
 </div>
 
@@ -156,13 +156,13 @@
     <div class="box" id="box1-voluntary">
         <h1>Need The food </h1>
         <p>Let us Know  <br>whenever is the need.</p>
-        <a href="login.php"><button>Food</button></a>
+        <a href="donor_details.php"><button>Food</button></a>
     </div>
     <div class="box" id="box2-donation">
         <h1>Support A Great Course</h1>
         <p>Take an initiative and <br>Donate
              surplus or fresh food.</p>
-        <a href="donor-login.html">
+        <a href="donor_login.php">
             <button>Donate</button>
         </a>
     </div>

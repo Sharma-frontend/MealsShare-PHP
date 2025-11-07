@@ -47,6 +47,7 @@ if (isset($_SESSION['user_email'])) {
                 <th>Quantity</th>
                 <th>Manufacturing Date</th>
                 <th>ExpiryDate</th>
+                <th>Status</th>
                 <th>Mobile</th>
                 <th>Alternative Mobile</th>
                 <th>Address</th>
@@ -66,6 +67,7 @@ if (isset($_SESSION['user_email'])) {
             echo "<td>" . $row['qty'] . " " . $row['qty_value'] . "</td>";
             echo "<td>" . $row['mfg'] . "</td>";
             echo "<td>" . $row['exp'] . "</td>";
+            echo "<td>" . $row['status'] . "</td>";
             echo "<td>" . $row['mobile'] . "</td>";
             echo "<td>" . $row['alter_mobile'] . "</td>";
             echo "<td>" . $row['city'] . " " . $row['state']. " " . $row['pincode'] . "</td>";

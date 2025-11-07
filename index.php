@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Hunger</title>
+    <title>Meal Share</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css?v=<?php echo time();?>" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?v=<?php echo time();?>"
@@ -42,7 +42,7 @@
         
         <nav>
             <a href="index.php" style="text-decoration: none; color: black;">
-                <h1>Smash The Hunger</h1>
+                <h1>Meal Share</h1>
             </a>
             <ul>
             <li class="dropdown">

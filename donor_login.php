@@ -53,7 +53,7 @@ if (isset($_POST['login'])) {
 <body>
 
     <nav> 
-      <a href="index.php" style="text-decoration: none; color: black;"><h1>Smash The Hunger</h1></a>
+      <a href="index.php" style="text-decoration: none; color: black;"><h1>Meal Share</h1></a>
         <ul>
          <!-- <a href="index.html"><li>Home</li></a> -->
          <!-- <a href="Donation.html"><li>Donation</li></a> -->
@@ -66,22 +66,22 @@ if (isset($_POST['login'])) {
      </nav>
 
 
-    <div class="box1">
+     <div class="box1">
       <div class="box2">
-        <h1 style="margin-left: 70px;">Donor Login</h1>
+        <h1 style="margin-left: 60px;">Donor Login</h1>
            <form method="POST">
            <div class="form-floating mb-3">
-              <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: 50%;">
+              <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
               <label for="floatingInput">Email address</label>
               </div>
              <div class="form-floating">
-              <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" style="width: 50%;">
+              <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" >
               <label for="floatingPassword">Password</label>
              </div>
              <div class="col-12">
-              <button type="submit" class="btn btn-primary login_btn"style="background-color: #CE7C02; border-style:none;" name="login">Log In</button>
-              <button type="submit" class="btn btn-primary login_btn"style="background-color: #CE7C02; border-style:none;"><a style="color: white;text-decoration: none;" href="donor_reg.php">Sign Up</a></button><br>
-              <a href="login.php" sid="donor_link" style="color: black;text-decoration: none; ">Receiver Login</a>
+              <button type="submit" class="btn btn-primary login_btn" style="background-color: #CE7C02;border-style:none;"  name="login">Log In</button>
+              <button type="submit" class="btn btn-primary login_btn"style="background-color: #CE7C02; border-style:none;"  href="Registration.php">Sign Up</a></button><br>
+              <a href="login.php" id="donor_link" style="color: black;text-decoration: none; ">Receiver Login</a>
               <a href="admin_login.php" style="color: black;text-decoration: none; ">/Admin Login</a>
             </div>
            </form>

@@ -29,7 +29,7 @@ $result = $con->query($sql);
         <h1 >All Donors</h1>
 
        
-   <div id="displaytble" style="margin-left: -280px;">
+   <div id="displaytble" style="margin-left: -480px;">
    <table >
         <thead>
             <tr>

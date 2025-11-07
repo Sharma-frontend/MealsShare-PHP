@@ -53,7 +53,7 @@ if (isset($_POST['login'])) {
 <body>
 
     <nav> 
-      <a href="index.php" style="text-decoration: none; color: black;"><h1>Smash The Hunger</h1></a>
+      <a href="index.php" style="text-decoration: none; color: black;"><h1>Meal Share</h1></a>
         <ul>
          <!-- <a href="index.html"><li>Home</li></a> -->
          <!-- <a href="Donation.html"><li>Donation</li></a> -->

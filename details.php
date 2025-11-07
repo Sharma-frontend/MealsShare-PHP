@@ -28,6 +28,7 @@
                     <tr><th>Quantity</th><td id="quantity">Loading...</td></tr>
                     <tr><th>Manufacturing Date</th><td id="mfg">Loading...</td></tr>
                     <tr><th>Expiry Date</th><td id="expiry">Loading...</td></tr>
+                    <tr><th>Status</th><td id="status">Loading...</td></tr>
                     <tr><th>Mobile</th><td id="mobile">Loading...</td></tr>
                     <tr><th>Alternative Mobile</th><td id="altMobile">Loading...</td></tr>
                     <tr><th>Address</th><td id="address">Loading...</td></tr>
@@ -70,7 +71,8 @@
                 document.getElementById('quantity').textContent = `${data.qty || '0'} ${data.qty_value || ''}`;
                 document.getElementById('mfg').textContent = data.mfg || 'N/A';
                 document.getElementById('expiry').textContent = data.exp || 'N/A';
-                document.getElementById('mobile').textContent = data.mobile || 'N/A';
+                document.getElementById('status').textContent = data.status || 'N/A';
+                 document.getElementById('mobile').textContent = data.mobile || 'N/A';
                 document.getElementById('altMobile').textContent = data.alter_mobile || 'N/A';
                 document.getElementById('address').textContent = `${data.city || ''} ${data.state || ''} ${data.pincode || ''}`;
             })

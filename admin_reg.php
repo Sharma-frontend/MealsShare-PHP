@@ -63,7 +63,7 @@ if (isset($_POST['register'])) {
 
     <nav>
         <!-- <h1>Zero Hunger</h1> -->
-        <a href="admin_index.php" style="text-decoration: none; color: black; margin-left: 495px;"><h1>Smash The Hunger</h1></a>
+        <a href="admin_index.php" style="text-decoration: none; color: black; margin-left: 495px;"><h1>Meal Share</h1></a>
         <ul>
             <!-- <a href="index.html">
                 <li>Home</li>

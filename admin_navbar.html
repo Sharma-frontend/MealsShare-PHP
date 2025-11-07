@@ -1,15 +1,21 @@
-<nav>
-    <a href="admin_index.php" style="text-decoration: none; color: black;">
-        <h1>Smash The Hunger</h1>
+<style>
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: -10px;
+}
+</style>
+<nav> <a href="admin_index.php" style="text-decoration: none; color: black;">
+        <h1>Meal Share</h1>
     </a>
     <ul>
         <a href="admin_index.php">
             <li>Home</li>
         </a>
-        <!-- Dropdown Menu -->
-        <li class="dropdown">
-            <a href="#" class="dropdown-btn">Donations</a>
-            <ul class="dropdown-menu" style="padding: 0px 0;">
+         <!-- Dropdown Menu -->
+        <li class="dropdown" >
+            <a  href="#" style="margin-left:-350px ;" class="dropdown-btn">Donations</a>
+            <ul style="margin-left:-350px ;" class="dropdown-menu">
                 <a style="font-size: 16px;padding: 0px 5px;" href="admin_activedonation.php">
                     <li>Active Donations</li>
                 </a>
@@ -18,10 +24,9 @@
                 </a>
             </ul>
         </li>
-        <!-- Dropdown Menu -->
         <li class="dropdown">
-            <a href="#" class="dropdown-btn">More</a>
-            <ul class="dropdown-menu" style="padding: 0px 0;">
+            <a href="#" class="dropdown-btn"  style="margin-left:-700px ;">More</a>
+            <ul class="dropdown-menu" style="padding: 0px 0; margin-left:-720px ;">
                 <a style="font-size: 16px;padding: 0px 5px;" href="allreciver.php">
                     <li>View Recivers</li>
                 </a>
@@ -37,7 +42,7 @@
             </ul>
         </li>
         
-        <a href="complaints.php">
+        <a style="margin-left:-550px ;" href="complaints.php">
             <li>Complaints</li>
         </a>
     </ul>

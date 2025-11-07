@@ -18,6 +18,7 @@ if (isset($_POST['register'])) {
     $city = $_SESSION['user_city'];
     $state = $_SESSION['user_state'];
     $pincode = $_SESSION['user_pincode'];
+    
 
     // Insert into `alldonations` table
     $insertUser = "INSERT INTO alldonations 

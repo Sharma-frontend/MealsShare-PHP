@@ -47,7 +47,7 @@ if (isset($_POST['login'])) {
 <body>
 
     <nav> 
-      <a href="index.php" style="text-decoration: none; color: black;"><h1>Smash The Hunger</h1></a>
+      <a href="index.php" style="text-decoration: none; color: black;"><h1>Meal Share</h1></a>
         <ul>
          <!-- <a href="index.html"><li>Home</li></a> -->
          <!-- <a href="Donation.html"><li>Donation</li></a> -->
@@ -64,12 +64,12 @@ if (isset($_POST['login'])) {
       <div class="box2">
         <h1 style="margin-left: 70px;">Admin Login</h1>
            <form method="POST">
-           <div class="form-floating mb-3">
-              <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="width: 50%;">
+            <div class="form-floating mb-3">
+              <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
               <label for="floatingInput">Email address</label>
               </div>
              <div class="form-floating">
-              <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" style="width: 50%;">
+              <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" >
               <label for="floatingPassword">Password</label>
              </div>
              <div class="col-12">

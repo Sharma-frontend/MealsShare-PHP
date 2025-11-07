@@ -10,11 +10,12 @@ if (isset($_POST['register'])) {
     $repassword=mysqli_real_escape_string($con,$_POST['repassword'] );
     $first_name=mysqli_real_escape_string($con, $_POST['first_name']);
     $last_name=mysqli_real_escape_string($con, $_POST['last_name']);
-    $user_name=mysqli_real_escape_string($con, $_POST['user_name']);
+    $ngo_name=mysqli_real_escape_string($con, $_POST['ngo_name']);
     $mobile=mysqli_real_escape_string($con, $_POST['mobile']);
     $city=mysqli_real_escape_string($con, $_POST['city']);
     $state=isset($_POST['state']) && $_POST['state'] !== 'NULL' ? mysqli_real_escape_string($con, $_POST['state']) : null;
     $pincode=mysqli_real_escape_string($con, $_POST['pincode']);
+    $darpan = mysqli_real_escape_string($con, $_POST['darpan']);//darpan
 
     // Check if the email already 
     $checkEmail = "SELECT * FROM user WHERE email = '$email'";
@@ -28,7 +29,7 @@ if (isset($_POST['register'])) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert user into the database
-        $insertUser = "INSERT INTO user (email, password, first_name, last_name, user_name, mobile, city, state, pincode) VALUES ('$email', '$hashedPassword','$first_name','$last_name','$user_name','$mobile','$city','$state','$pincode')";
+        $insertUser = "INSERT INTO user (email, password, first_name, last_name, ngo_name, mobile, city, state, pincode,darpan) VALUES ('$email', '$hashedPassword','$first_name','$last_name','$ngo_name','$mobile','$city','$state','$pincode','$darpan')";
         if (mysqli_query($con, $insertUser)) {
             header('Location: login.php');
         } else {
@@ -62,7 +63,7 @@ if (isset($_POST['register'])) {
 
     <nav>
         <!-- <h1>Zero Hunger</h1> -->
-        <a href="index.php" style="text-decoration: none; color: black; margin-left: 495px;"><h1>Smash The Hunger</h1></a>
+        <a href="index.php" style="text-decoration: none; color: black; margin-left: 495px;"><h1>Meal Share</h1></a>
         <ul>
             <!-- <a href="index.html">
                 <li>Home</li>
@@ -96,7 +97,7 @@ if (isset($_POST['register'])) {
                         placeholder="Enter Your Email Here">
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label for="validationCustom01" class="form-label">First name</label>
                     <input type="text" name="first_name" class="form-control" id="validationCustom01" value="" required
                         placeholder="Enter First Name">
@@ -104,29 +105,29 @@ if (isset($_POST['register'])) {
                         Looks good!
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label for="validationCustom02" class="form-label">Last name</label>
                     <input type="text" name="last_name" class="form-control" id="validationCustom02" value="" required placeholder="Enter Last Name">
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <label for="validationCustomUsername" class="form-label">Username</label>
+                <div class="col-md-6">
+                    <label for="validationCustomUsername" class="form-label">NGO Name</label>
                     <div class="input-group has-validation">
                         <!-- <span class="input-group-text" id="inputGroupPrepend">UN</span> -->
-                        <input type="text" name="user_name"class="form-control" id="validationCustomUsername"
+                        <input type="text" name="ngo_name"class="form-control" id="validationCustomUsername"
                             aria-describedby="inputGroupPrepend" placeholder="Enter Username"required>
                         <div class="invalid-feedback">
                             Please choose a username.
                         </div>
                     </div>
                 </div>
-                <div class="mid-3">
+                <div class="col-md-6">
                 <label for="exampleFormControlTextarea1" class="form-label">Mobile No.</label>
                 <input type="text" name="mobile" class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Mobile No" rows="3">
             </div>
-           
+
                 <div class="col-md-6">
                     <label for="validationCustom03" class="form-label">City</label>
                     <input type="text" name="city" class="form-control" id="validationCustom03" placeholder="Enter City Name" required>
@@ -190,6 +191,14 @@ if (isset($_POST['register'])) {
                 <div class="col-md-6">
                     <label for="validationCustom07" class="form-label">Re-enter Password</label>
                     <input type="password" name="repassword" class="form-control" id="validationCustom07" value="" required placeholder="Re-enter Password">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                 <!-- DARPAN Id Field -->
+                <div class="col-md-6">
+                    <label for="validationCustom08" class="form-label">DARPAN Id</label>
+                    <input type="text" name="darpan" class="form-control" id="validationCustom08" value="" required placeholder="Enter DARPAN Id">
                     <div class="valid-feedback">
                         Looks good!
                     </div>

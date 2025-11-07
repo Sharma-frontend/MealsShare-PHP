@@ -57,7 +57,7 @@
 </div>
 
 <div class="main-content">
-    <h1>WELCOME TO Zero Hunger</h1>
+    <h1>WELCOME To Meal Share</h1>
     <p>We Believe that we can Eradicate <br><span style="color: red">Poverty</span> with you</p>
 </div>
 

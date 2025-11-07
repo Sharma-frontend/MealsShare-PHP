@@ -20,7 +20,7 @@
 
     <nav>
         <!-- <h1>Zero Hunger</h1> -->
-        <a href="index.html" style="text-decoration: none; color: black; margin-left: 485px;"><h1>Smash The Hunger</h1></a>
+        <a href="index.html" style="text-decoration: none; color: black; margin-left: 485px;"><h1>Meal Share</h1></a>
         <ul>
             <!-- <a href="index.html">
                 <li>Home</li>

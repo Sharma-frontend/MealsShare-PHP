@@ -16,7 +16,7 @@ if (isset($_POST['register'])) {
     $state=isset($_POST['state']) && $_POST['state'] !== 'NULL' ? mysqli_real_escape_string($con, $_POST['state']) : null;
     $pincode=mysqli_real_escape_string($con, $_POST['pincode']);
     $type=mysqli_real_escape_string($con, $_POST['type']);
-    $aadhar=mysqli_real_escape_string($con, $_POST['aadhar']);
+    // $darpan=mysqli_real_escape_string($con, $_POST['darpan']);
 
     // Check if the email already 
     // $verify_email="INSERT INTO email_otp (email) VALUES ('$email;)";
@@ -31,7 +31,7 @@ if (isset($_POST['register'])) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert user into the database
-        $insertUser = "INSERT INTO donor_reg (email, password, first_name, last_name, user_name, mobile, city, state, pincode,aadhar,type) VALUES ('$email', '$hashedPassword','$first_name','$last_name','$user_name','$mobile','$city','$state','$pincode','$aadhar','$type')";
+        $insertUser = "INSERT INTO donor_reg (email, password, first_name, last_name, user_name, mobile, city, state, pincode,type) VALUES ('$email', '$hashedPassword','$first_name','$last_name','$user_name','$mobile','$city','$state','$pincode','$type')";
         if (mysqli_query($con, $insertUser)) {
             header('Location: donor_login.php');
         } else {
@@ -65,7 +65,7 @@ if (isset($_POST['register'])) {
 
     <nav>
         <!-- <h1>Zero Hunger</h1> -->
-        <a href="index.php" style="text-decoration: none; color: black; margin-left: 495px;"><h1>Smash The Hunger</h1></a>
+        <a href="index.php" style="text-decoration: none; color: black; margin-left: 495px;"><h1>Meal Share</h1></a>
         <ul>
             <!-- <a href="index.html">
                 <li>Home</li>
@@ -129,6 +129,7 @@ if (isset($_POST['register'])) {
                 <label for="exampleFormControlTextarea1" class="form-label">Mobile No.</label>
                 <input type="text" name="mobile" class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Mobile No" rows="3">
             </div>
+              
             <div class="col-md-12" >
                     <label for="validationCustom05" id="validationCustom05"class="form-label">Donor Type</label>
                     <input style="margin-left:100px;" type="radio" name="type" value="Restaurant" required>  Restaurant
@@ -207,13 +208,13 @@ if (isset($_POST['register'])) {
                         Looks good!
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <label for="validationCustom08" class="form-label">Aadhar No.</label>
-                    <input type="password" name="aadhar" class="form-control" id="validationCustom08" value="" required placeholder="Enter Aadhar No">
+                <!-- <div class="col-md-6">
+                    <label for="validationCustom08" class="form-label">DARPAN Id</label>
+                    <input type="password" name="darpan" class="form-control" id="validationCustom08" value="" required placeholder="Enter DARPAN Id">
                     <div class="valid-feedback">
                         Looks good!
                     </div>
-                </div>
+                </div> -->
                
                 <div class="col-12">
                     <input style=" background-color: #CE7C02;border-style: none;" type="submit" name="register" value="Submit form"class="btn btn-primary">
